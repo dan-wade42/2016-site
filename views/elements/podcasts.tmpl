@@ -1,0 +1,31 @@
+{{define "podcasts"}}
+{{with .}}
+  <div id="index-podcasts" class="container-fluid container-padded pb-0 bg-secondary">
+    <div class="row">
+      <div class="col-12">
+        <h2>Latest Podcasts</h2>
+      </div>
+    </div>
+    <div class="row scroll-horiz pb-3 custom-scrollbar">
+      {{range .Podcasts}}
+      <div class="col-8 col-sm-7 col-md-4 col-lg-3 col-xl-2 pb-3">
+        <a class="ury-card podcast" href="{{.MicrositeLink.URL}}">
+          <div class="ury-card-img" style="background: url('https://ury.org.uk{{.Photo}}');"></div>
+          <div class="ury-card-body">
+            <div class="ury-card-title">{{.Title}}</div>
+            <span>{{.Time.Format "Monday, _2 Jan 2006"}}</span>
+          </div>
+        </a>
+      </div>
+      {{end}}
+      <div class="col-8 col-sm-7 col-md-4 col-lg-3 col-xl-2 pb-3">
+        <a class="ury-card podcast link" href='{{url "/podcasts/"}}'>
+          <div class="ury-card-body">
+            <div class="ury-card-lg-title">See all podcasts...</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+{{end}}
+{{end}}
