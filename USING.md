@@ -44,7 +44,7 @@ export GOPATH=~/go
     * `git checkout this-is-a-branch-name`
 
 #### Running the server =====
-* Copy `config.toml.example` to `config.toml`
+* Copy `config.toml.example` (from ~/go/src/github.com/UniversityRadioYork/2016-site) to `config.toml`
 * Create a new file called `.myradio.key` and paste your [myradio api-key](https://ury.org.uk/ceedox/computing:software:in-house:myury:api#getting_a_key) into it
 * Run `make run`
 * Assuming there are no errors, go to http://localhost:3000 in your browser and there should be a website
